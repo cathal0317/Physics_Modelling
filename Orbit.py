@@ -1,4 +1,4 @@
-# Use the Verlet method (see script, section 5.3.1, from page 76) to calculate the orbit of the Earth around the Sun. The equations of motion for the position $(x(t),y(t))$ of the planet in its orbital plane are: $$\frac{d^{2}x(t)}{dt^{2}}=-G\,M\,\frac{x(t)}{r^{3}},\;\frac{d^{2}y(t)}{dt^{2}}=-G\,M\,\frac{y(t)}{r^{3}},$$ where $r=\sqrt{x^{2}+y^{2}}$.
+# Use the Verlet method to calculate the orbit of the Earth around the Sun. The equations of motion for the position $(x(t),y(t))$ of the planet in its orbital plane are: $$\frac{d^{2}x(t)}{dt^{2}}=-G\,M\,\frac{x(t)}{r^{3}},\;\frac{d^{2}y(t)}{dt^{2}}=-G\,M\,\frac{y(t)}{r^{3}},$$ where $r=\sqrt{x^{2}+y^{2}}$.
 
 # ### Data:
 # Use $G = 6.6738 \times 10^{-11} \, \text{m}^3\text{kg}^{-1}\text{s}^{-2}$ as Newton's gravitational constant, $M = 1.9891 \times 10^{30} \, \text{kg}$ as the mass of the Sun. For Earth's mass, use $m = 5.9722 \times 10^{24} \, \text{kg}$. The initial conditions should be $ \mathbf{r}_0 = (1.521 \times 10^{11}, 0) \, \text{m}$ and $\mathbf{v}_0 = (0, 2.9291 \times 10^4) \, \text{m/s}$. Time evaluation points are provided in the task description, and note that you are working in SI units.
