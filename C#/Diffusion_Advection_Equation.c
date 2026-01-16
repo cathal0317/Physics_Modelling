@@ -234,10 +234,10 @@ struct band_mat{
     // Solve for P
     // ************
 
-    // Left boundary 
-    double D_plus_half = 0.5 * (D[0] + D[1]);
-    setv(&bmat, 0, 0, -D_plus_half/dx - v);
-    setv(&bmat, 0, 1,  D_plus_half/dx);
+    // Left boundary Robin IC
+
+    setv(&bmat, 0, 0, -D[0]/dx - v);
+    setv(&bmat, 0, 1,  D[0]/dx);
     RHS[0] = 0.0;
 
     // Interior points of P
@@ -258,7 +258,7 @@ struct band_mat{
       RHS[i] = -S[i];
     }
 
-    // Right boundary 
+    // Right boundary Dirichlet BC
     setv(&bmat, ncols-1, ncols-1, 1.0);
     RHS[ncols-1] = C_p;
 
@@ -287,9 +287,8 @@ struct band_mat{
     // ************
 
     // Left boundary
-    D_plus_half = 0.5 * (D[0] + D[1]);
-    setv(&bmat, 0, 0, -D_plus_half/dx - v);
-    setv(&bmat, 0, 1,  D_plus_half/dx);
+    setv(&bmat, 0, 0, -D[0]/dx - v);
+    setv(&bmat, 0, 1,  D[0]/dx);
     RHS[0] = 0.0;
 
     // Interior points of Q
